@@ -6,25 +6,42 @@
         <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
-        <div class="head">
-            <p class = "title">Egor Guzev</p>
-        </div>
+        <div class="header">
+            <h2>Egor Guzev</h2>
+            <div class="progress-container">
+              <div class="progress-bar" id="myBar"></div>
+            </div>  
+          </div>
         <div class="content">
             <h1>First div</h1>
             <div class = "firstBlock">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi officia culpa adipisci consequuntur dolor, neque necessitatibus odit dolores nesciunt! Modi nobis, accusantium officiis dolorum natus quasi voluptatibus reiciendis? Delectus, iste!
-
+                <p class = "text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium cum doloribus quod iste modi repellendus. Et beatae minus neque eum, recusandae fugit vero consectetur. Libero dolorem dignissimos vitae facilis dicta!
+                </p>
            </div>
            <h1>Sec div</h1>
            <div class = "secBlock">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium cum doloribus quod iste modi repellendus. Et beatae minus neque eum, recusandae fugit vero consectetur. Libero dolorem dignissimos vitae facilis dicta!
-
+                <p class = "text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium cum doloribus quod iste modi repellendus. Et beatae minus neque eum, recusandae fugit vero consectetur. Libero dolorem dignissimos vitae facilis dicta!
+                </p>
             </div>
             <h1>Third div</h1>
             <div class = "thirdBlock">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic beatae aliquid fugit consequuntur sapiente voluptatum. Nihil saepe fugit ea incidunt quasi doloribus itaque suscipit, deserunt sit temporibus odit optio iure!
-
+                <p class = "text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium cum doloribus quod iste modi repellendus. Et beatae minus neque eum, recusandae fugit vero consectetur. Libero dolorem dignissimos vitae facilis dicta!
+                </p>
             </div>
+
         </div>
+        <script> 
+            window.onscroll = function() {myFunction()};
+            var mybutton = document.getElementById("myBtn");
+            function myFunction() {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        </script>
     </body>
 </html>
